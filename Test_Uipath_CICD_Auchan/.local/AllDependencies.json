@@ -7569,9 +7569,9 @@
     "restore": {
       "projectUniqueName": "Test_Uipath_CICD_Auchan",
       "projectName": "Test_Uipath_CICD_Auchan",
-      "projectPath": "C:\\Users\\bsomrani\\Documents\\UiPath\\Test_Uipath_CICD_Auchan\\.local",
+      "projectPath": "C:\\Users\\bsomrani\\Documents\\Uipath_GitHubActionTest\\Test_Uipath_CICD_Auchan\\.local",
       "packagesPath": "C:\\Users\\bsomrani\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bsomrani\\Documents\\UiPath\\Test_Uipath_CICD_Auchan\\.local"
+      "outputPath": "C:\\Users\\bsomrani\\Documents\\Uipath_GitHubActionTest\\Test_Uipath_CICD_Auchan\\.local"
     },
     "frameworks": {
       "net461": {
