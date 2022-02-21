@@ -24,4 +24,10 @@ jobs:
           echo "Home: ${HOME}"
           echo "GITHUB_WORKSPACE: ${{github.workspace}}"
           
-  
+  BuildPackage:
+      runs-on: windows-latest
+      steps:
+      - name: build NuGets package
+        shell: pwsh
+        run: |
+          ${{github.workspace}}/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1
