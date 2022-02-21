@@ -27,4 +27,4 @@ jobs:
       - name: build NuGets package
         shell: pwsh
         run: |
-          ${{github.workspace}}/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1
+          C:\Users\bsomrani\Documents\Uipath_GitHubActionTest\Test_Uipath_CICD_Auchan\scripts\UiPathPack.ps1
