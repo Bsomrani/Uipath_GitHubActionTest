@@ -26,5 +26,4 @@ jobs:
       steps:
       - name: build NuGets package
         shell: pwsh
-        run: |
-          C:\Users\bsomrani\Documents\Uipath_GitHubActionTest\Test_Uipath_CICD_Auchan\scripts\UiPathPack.ps1
+        run: C:\Users\bsomrani\Documents\Uipath_GitHubActionTest\Test_Uipath_CICD_Auchan\scripts\UiPathPack.ps1
