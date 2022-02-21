@@ -9,27 +9,26 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+env :
+  PROJECT_NAME: Uipath_GitHubActionTest
+  PROJECT_FOLDER: ${{ github.action_path }}
+  
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  print-details:
     runs-on: windows-latest
     steps:
-      - name: Check out repository code
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        uses: actions/checkout@v2
-      - name: Build Nuget Package
+      - name: echo-default-env-variables
         shell: pwsh
-        run: ${{ github.workspace }}\Uipath_GitHubActionTest\scripts\UiPathPack.ps1 ${{ github.workspace }}\Uipath_GitHubActionTest\project.json -destination_folder ${{ github.workspace }}\package
-      - name: Upload UiPath Artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: Artifacts
-          path: |
-           package/*.*
-           scripts/*.ps1
+        run: |
+          echo "Home: ${HOME}"
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
+          
+  
