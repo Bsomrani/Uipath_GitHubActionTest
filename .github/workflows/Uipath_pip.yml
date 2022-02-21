@@ -13,17 +13,16 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   print-details:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: echo-default-env-variables
-        shell: pwsh
         run: |
           echo "Home: ${HOME}"
-          echo "GITHUB_WORKSPACE: ${{github.workspace}}"
-          
-  BuildPackage:
-      runs-on: windows-latest
-      steps:
-      - name: build NuGets package
-        shell: pwsh
-        run: C:\Users\bsomrani\Documents\Uipath_GitHubActionTest\Test_Uipath_CICD_Auchan\scripts\UiPathPack.ps1
+          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
+          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
+          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
+          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
+          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
+          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
+          echo "GITHUB_SHA: ${GITHUB_SHA}"
+          echo "GITHUB_REF: ${GITHUB_REF}"
