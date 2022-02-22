@@ -18,4 +18,4 @@ jobs:
       - name: Test1
         run: |
           New-Item -Path "C:\\" -ItemType "directory" -Name "scripts";
-          Invoke-WebRequest "https://github.com/Bsomrani/Uipath_GitHubActionTest/blob/main/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1" -OutFile "C:\\scripts\\UiPathPack.ps1";
+          Invoke-WebRequest "https://github.com/Bsomrani/Uipath_GitHubActionTest/raw/main/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1" -OutFile "C:\\scripts\\UiPathPack.ps1";
