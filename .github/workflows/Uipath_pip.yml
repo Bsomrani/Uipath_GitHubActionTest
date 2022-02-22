@@ -21,7 +21,7 @@ jobs:
         
       - name: location
         run: |
-          cd ${GITHUB_WORKSPACE}
+          cd D:\a\Uipath_GitHubActionTest\Uipath_GitHubActionTest
           dir
           
       - name: invoke new item
