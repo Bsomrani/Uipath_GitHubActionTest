@@ -15,6 +15,10 @@ jobs:
   print-details:
     runs-on: windows-latest
     steps:
+      - name: location
+        run: |
+          dir
+          
       - name: invoke new item
         run: |
           New-Item -Path "C:\\" -ItemType "directory" -Name "scripts";
