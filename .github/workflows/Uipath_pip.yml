@@ -12,11 +12,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  print-details:
+  print-details_and_test:
     runs-on: windows-latest
     steps:
       - name: location
         run: |
+          cd ${GITHUB_WORKSPACE}
           dir
           
       - name: invoke new item
