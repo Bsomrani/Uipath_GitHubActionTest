@@ -13,16 +13,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   print-details:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: echo-default-env-variables
+      - name: Test1
         run: |
-          echo "Home: ${HOME}"
-          echo "GITHUB_WORKFLOW: ${GITHUB_WORKFLOW}"
-          echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
-          echo "GITHUB_ACTOR: ${GITHUB_ACTOR}"
-          echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
-          echo "GITHUB_EVENT_NAME: ${GITHUB_EVENT_NAME}"
-          echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
-          echo "GITHUB_SHA: ${GITHUB_SHA}"
-          echo "GITHUB_REF: ${GITHUB_REF}"
+          New-Item -Path "C:\\" -ItemType "directory" -Name "scripts";
+Invoke-WebRequest "https://github.com/Bsomrani/Uipath_GitHubActionTest/blob/main/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1" -OutFile "C:\\scripts\\UiPathPack.ps1";
