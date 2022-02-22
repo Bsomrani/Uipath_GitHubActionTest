@@ -20,7 +20,12 @@ jobs:
           New-Item -Path "C:\\" -ItemType "directory" -Name "scripts";
           Invoke-WebRequest "https://github.com/Bsomrani/Uipath_GitHubActionTest/raw/main/Test_Uipath_CICD_Auchan/scripts/UiPathPack.ps1" -OutFile "C:\\scripts\\UiPathPack.ps1";
           dir C:\\scripts
+      
       - name: dir getcontent
+        run: |
+          Get-Content C:\\scripts\UiPathPack.ps1
+      
+      - name: ex script
         run: |
           Get-Content C:\\scripts\UiPathPack.ps1
           
