@@ -23,6 +23,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Test1c
+        shell: pwsh
         run: |
-          'C:\scripts\UiPathPack.ps1'
+          Get-Content "C:\scripts\UiPathPack.ps1"
           
