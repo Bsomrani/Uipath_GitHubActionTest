@@ -24,7 +24,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: dir getcontent
-        shell: pwsh
         run: |
           Get-Content "C:\\scripts\UiPathPack.ps1"
           
