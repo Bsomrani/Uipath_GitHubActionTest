@@ -9,12 +9,16 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
   print-details_and_test:
     runs-on: windows-latest
+
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        
       - name: location
         run: |
           cd ${GITHUB_WORKSPACE}
