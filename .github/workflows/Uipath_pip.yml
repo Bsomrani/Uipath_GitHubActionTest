@@ -26,5 +26,5 @@ jobs:
     steps:
       - name: dir getcontent
         run: |
-          Get-Content "C:\\scripts\UiPathPack.ps1"
+          Get-Content C:\\scripts\UiPathPack.ps1
           
